@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "description": "Blank photoreal scene plates for Punchy. card_roi is the blank card face as fractions of image width/height (0-1).",
+  "card_roi_schema": {
+    "x": "left edge of card face, fraction of image width",
+    "y": "top edge of card face, fraction of image height",
+    "w": "card face width, fraction of image width",
+    "h": "card face height, fraction of image height"
+  },
+  "scene_schema": {
+    "id": "stable string id referenced by cards.json scene_id",
+    "filename": "file under scenes/ (png/jpg)",
+    "aspect": "optional label e.g. 10:7 or width/height float",
+    "card_roi": {
+      "x": 0.0,
+      "y": 0.0,
+      "w": 0.0,
+      "h": 0.0
+    }
+  },
+  "scenes": [
+    {
+      "id": "wallet",
+      "filename": "wallet.jpg",
+      "aspect": "4:3",
+      "card_roi": {
+        "x": 0.18,
+        "y": 0.22,
+        "w": 0.64,
+        "h": 0.48
+      }
+    },
+    {
+      "id": "hand",
+      "filename": "hand.jpg",
+      "aspect": "4:3",
+      "card_roi": {
+        "x": 0.28,
+        "y": 0.22,
+        "w": 0.52,
+        "h": 0.42
+      }
+    },
+    {
+      "id": "cafe",
+      "filename": "cafe.jpg",
+      "aspect": "4:3",
+      "card_roi": {
+        "x": 0.22,
+        "y": 0.28,
+        "w": 0.52,
+        "h": 0.42
+      }
+    },
+    {
+      "id": "fridge",
+      "filename": "fridge.jpg",
+      "aspect": "4:3",
+      "card_roi": {
+        "x": 0.28,
+        "y": 0.22,
+        "w": 0.42,
+        "h": 0.45
+      }
+    }
+  ],
+  "example_roi_placeholders": [
+    {
+      "id": "example_cafe_table",
+      "filename": "example_cafe_table.png",
+      "aspect": "10:7",
+      "card_roi": {
+        "x": 0.12,
+        "y": 0.18,
+        "w": 0.76,
+        "h": 0.62
+      },
+      "_note": "Typical centered landscape card on a table — replace with measured ROI from real plate."
+    },
+    {
+      "id": "example_desk_angled",
+      "filename": "example_desk_angled.png",
+      "aspect": "4:3",
+      "card_roi": {
+        "x": 0.18,
+        "y": 0.22,
+        "w": 0.64,
+        "h": 0.55
+      },
+      "_note": "Slightly smaller card in frame with more background margin."
+    },
+    {
+      "id": "example_closeup",
+      "filename": "example_closeup.png",
+      "aspect": "16:10",
+      "card_roi": {
+        "x": 0.08,
+        "y": 0.14,
+        "w": 0.84,
+        "h": 0.72
+      },
+      "_note": "Card fills most of the frame; keep text/holes inside ROI."
+    }
+  ]
+}
