@@ -6,6 +6,6 @@ Installed bots download what they need from here. Parents using a Punchy (or oth
 
 ## Layout
 
-- `punchy/` — blank photoreal punchcard scenes for Punchy
+- `punchy/` — blank photoreal punchcard scenes + `render_card.py` for Punchy v1
 
 More bots can add their own folders later.

@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "description": "Active Punchy weekly cards. Owner punches only; punched never decreases; auto-renew weekly (same scene all week).",
+  "card_schema": {
+    "id": "stable card id",
+    "person": "display name",
+    "emoji": "single emoji for the card",
+    "goal": "goal text (punch-up prize) or allowance label (punch-down)",
+    "direction": "up | down",
+    "holes": "integer 1-7",
+    "punched": "integer 0..holes (allowance used when direction=down; progress when up)",
+    "start_weekday": "0=Mon .. 6=Sun — week boundary for auto-renew",
+    "week_start_date": "ISO date YYYY-MM-DD of current week start",
+    "scene_id": "id from scenes/manifest.json scenes[]",
+    "status": "active | stopped",
+    "created_at": "ISO-8601 timestamp"
+  },
+  "cards": [
+    {
+      "id": "card_maya_reading",
+      "person": "Maya",
+      "emoji": "📚",
+      "goal": "Ice cream after 5 reading nights",
+      "direction": "up",
+      "holes": 5,
+      "punched": 2,
+      "start_weekday": 0,
+      "week_start_date": "2026-10-06",
+      "scene_id": "wallet",
+      "status": "active",
+      "created_at": "2026-10-06T14:00:00-07:00"
+    },
+    {
+      "id": "card_leo_screen",
+      "person": "Leo",
+      "emoji": "🎮",
+      "goal": "Screen time punches (max 4)",
+      "direction": "down",
+      "holes": 4,
+      "punched": 1,
+      "start_weekday": 0,
+      "week_start_date": "2026-10-06",
+      "scene_id": "hand",
+      "status": "active",
+      "created_at": "2026-10-06T14:05:00-07:00"
+    }
+  ]
+}
